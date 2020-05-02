@@ -44,8 +44,8 @@ const HomeScreen = (props) => {
         return dim.width >= dim.height;
     };
 
-    const [firstNum, setFirstNum] = useState(0);
-    const [secondNum, setSecondNum] = useState(0);
+    const [firstNum, setFirstNum] = useState('');
+    const [secondNum, setSecondNum] = useState('');
     const [operation, setOperation] = useState(null);
     const [result, setResult] = useState(null);
     const [history, setHistory] = useState([]);
@@ -58,8 +58,8 @@ const HomeScreen = (props) => {
     }
 
     const clear = () => {
-        setFirstNum(null);
-        setSecondNum(null);
+        setFirstNum('');
+        setSecondNum('');
         setOperation(null);
         setResult(null);
     }
@@ -99,14 +99,28 @@ const HomeScreen = (props) => {
     const handleSetNumbers = (value) => {
         if (!!result) {
             clear();
-            setFirstNum(value)
+            setFirstNum(String(value))
         } else {
             if (!!operation) {
-                let val = secondNum + value;
+                let val = "";
+                if(secondNum.indexOf(".") >= 0 && value === ".") {
+                    val = secondNum;
+                } else {
+                    val = secondNum + String(value);
+                }
                 setSecondNum(val);
             } else {
-                let val = firstNum + value;
+                let val = "";
+                if(firstNum.indexOf(".") >= 0 && value === "." ) {
+                    val = firstNum;
+                } else {
+                    val = firstNum + String(value);
+                }
                 setFirstNum(val);
+
+
+                // let val = firstNum + String(value);
+                // setFirstNum(val);
             }
         }
     }

@@ -5,9 +5,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import HomeScreen from "./screens/Home";
 import History from "./screens/History";
-import { Text, Platform } from "react-native"
+import { YellowBox, Platform } from "react-native"
 import Colors from "./styles/Colors";
 import { HistoryProvider } from './context/HistoryContext';
+
+YellowBox.ignoreWarnings([
+  'Non-serializable values were found in the navigation state',
+]);
 
 const Stack = createStackNavigator();
 
