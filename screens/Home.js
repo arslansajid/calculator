@@ -9,9 +9,9 @@ import {
 
 import { totalSize } from 'react-native-dimension';
 import Button from "../components/Button";
-import Colors from "../Styles/Colors";
+import Colors from "../styles/Colors";
 import History from "./History";
-import HistoryContext from "../Context/HistoryContext";
+import HistoryContext from "../context/HistoryContext";
 
 const SCREEN_WIDTH = Dimensions.get("screen").width;
 const SCREEN_HEIGHT = Dimensions.get("screen").height;

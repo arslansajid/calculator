@@ -6,8 +6,8 @@ import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 import HomeScreen from "./screens/Home";
 import History from "./screens/History";
 import { Text, Platform } from "react-native"
-import Colors from "./Styles/Colors";
-import { HistoryProvider } from './Context/HistoryContext';
+import Colors from "./styles/Colors";
+import { HistoryProvider } from './context/HistoryContext';
 
 const Stack = createStackNavigator();
 

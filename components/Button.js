@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 import { totalSize } from 'react-native-dimension';
-import Colors from "../Styles/Colors";
+import Colors from "../styles/Colors";
 
 const Button = (props) => {
     const { text, color, width, height, onPress } = props;

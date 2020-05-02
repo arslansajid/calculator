@@ -7,8 +7,8 @@ import {
 } from 'react-native';
 
 import { totalSize } from 'react-native-dimension';
-import Colors from "../Styles/Colors";
-import HistoryContext from "../Context/HistoryContext";
+import Colors from "../styles/Colors";
+import HistoryContext from "../context/HistoryContext";
 
 const History = (props) => {
     const historyContext = useContext(HistoryContext);
