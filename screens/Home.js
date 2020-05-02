@@ -52,9 +52,6 @@ const HomeScreen = (props) => {
     const [orientation, setOrientation] = useState(isPortrait() ? 'portrait' : 'landscape');
     const [dimensions, setDimensions] = useState({ width: SCREEN_WIDTH, height: SCREEN_HEIGHT });
 
-    useEffect(() => {
-    }, [orientation, dimensions, result, history])
-
     onLayout = (event) => {
         const { x, y, height, width } = event.nativeEvent.layout;
         setDimensions({ width, height });

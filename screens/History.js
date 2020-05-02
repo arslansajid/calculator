@@ -32,8 +32,10 @@ const History = (props) => {
                 })}
 
             </ScrollView>
-            <TouchableOpacity style={styles.clearButton}
+            <TouchableOpacity
+                style={[styles.clearButton, !historyContext.history.length ? styles.btnDiabled : {}]}
                 onPress={() => handleClear()}
+                disabled={!historyContext.history.length}
             >
                 <Text style={styles.clearButtonText}>Clear</Text>
             </TouchableOpacity>
@@ -69,6 +71,9 @@ const styles = StyleSheet.create({
         fontSize: totalSize(3),
         fontWeight: '500',
         color: 'white',
+    },
+    btnDiabled: {
+        opacity: 0.5
     }
 })
 
